@@ -5,7 +5,10 @@ const links = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
 export default function Footer() {
   const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(id.toLowerCase());
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -86,4 +89,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}c
+}
